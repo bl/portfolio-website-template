@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <!-- include Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <!-- include Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<link href="assets/style.css" rel="stylesheet">
+	<title>Bernard Laveaux</title>
+</head>
+<body data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+  <!-- define navbar -->
+  <nav id="main-navbar" class="navbar navbar-light fixed-top bg-light">
+    <a class="navbar-brand" href="#">Bernard Laveaux</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#profile">About me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#experience">Experience</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="title">
+    <div class="container">
+      <h1>Bernard Laveaux</h1>
+    </div>
+  </div>
+  <div id="profile" class="profile">
+    <div class="container">
+      <h2>About me</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-background">
+            <img src="assets/profile.jpg" alt="" class="profile-image">
+          </div>
+        </div>
+        <div class="bio col-md-6">
+          <p>
+            I'm a <strong>computer science</strong> student studying my final year at <strong>Carleton University</strong>. I've been previously interested in web development framework design, crypto technologies including crypto commodities and blockchain, and Deep Learning paradigms. I'm interning at <strong>Yelp</strong> this winter, and I've previously interned at <strong>Wealthsimple</strong>, <strong>Shopify</strong>, and <strong>IBM Canada</strong>. I'm currently looking for an internship this <strong>summer 2018</strong>
+          </p>
+
+          <div class="contact">
+            <img src="assets/github-square.svg">
+            <img src="assets/facebook-square.svg">
+            <img src="assets/linkedin-square.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div>
+      <div id="experience" class="experiences container">
+        <h2>Experience</h2>
+        <!-- row of experiences -->
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Wealthsimple</h4>
+            <p>
+              May 2017 - August 2017
+            </p>
+          </div>
+          <div class="col-md-8">
+            <strong>Software Engineering Intern</strong>
+            <ul>
+              <li><span>Implemented containerization of resources to applications, facilitating separate isolated environments of the Wealthsimple platform</span></li>
+              <li><span>Refactored distinct portfolios into single versioned portfolios, facilitating automatic portfolio assignment during client onboarding</span></li>
+              <li><span>Integrated project repository messages and alerting into internal build tooling, allowing for immediate setting and displaying of important messages while preventing deployment conflicts</span></li>
+            <ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Shopify</h4>
+            <p>
+              May 2016 - December 2016
+            </p>
+          </div>
+          <div class="col-md-8">
+            <strong>Payments Software Developer Intern</strong>
+            <ul>
+              <li><span>Documented and resolved bug in Stripe’s open source Ruby API gem allowing timed-out idempotent requests to be correctly retried and resolved</span></li>
+              <li><span>Integrated W3C Payments Request-like Facebook Messenger payments APIs into the Shopify service, requiring full stack integration from clientside JS to back end decryption</span></li>
+              <li><span>Expanded merchant chargeback dispute coverage and success rates by automatically providing customer PoS signatures on merchant chargeback dispute submission</span></li>
+              <li><span>Implemented shop percentage based disabling of payment gateways to quickly respond to service outages with minimal disruption and downtime</span></li>
+            <ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="project" class="projects container">
+        <h2>Projects</h2>
+      </div>
+    </div>
+  </div>
+</body>

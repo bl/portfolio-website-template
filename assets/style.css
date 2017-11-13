@@ -1,0 +1,78 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height:100%;
+  color: #434242; /* use lighter font colour */
+  font-family: 'Open Sans', sans-serif !important; /* use Open sans sans-serif across whole document */
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.64;
+}
+
+/* custom header fotmatting */
+h2, h3, h5, h6, .h2, .h3, .h5, .h6, strong, b { margin-bottom: 20px; }
+h2, h3, h5, h6, .h2, .h3, .h5, .h6 { color: #22A39F; }
+h1 { font-size: 64px; font-weight: 700; margin-bottom: 10px; }
+h2 { font-size: 54px; text-align: center; }
+
+/* override Bootstrap container */
+.container {
+  padding: 40px 180px;
+  max-width: 1280px;
+}
+
+/* navbar section */
+.navbar a { color: black; }
+.navbar a:hover { color: #22A39F; }
+
+/* title section */
+.title {
+  background-image: url('interns.2016.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /*overflow: hidden;*/
+
+  height: 100vh;
+  width: 100vw;
+  max-width:100%;
+  text-align: center;
+}
+/* Add thin line under title */
+.title h1 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #FFFFFF;
+  border-bottom-color: rgba(255,255,255,0.6);
+  display: inline-block;
+}
+.title .container {
+  position: relative;
+  top: 28%;
+  z-index: 4;
+}
+.title .container > * { text-align: center; color: #FFFFFF; }
+
+/* alternate background */
+.content > div:nth-child(2n+1) { background-color: #F3EFDE; }
+
+/* profile section */
+.profile, .content { width: 100vw; max-width:100%; }
+.profile .profile-background > img { width: 100%; }
+.profile-background { margin-top: -20px; background-color: #F3EFDE; clip-path: circle(115px at center); }
+.profile-image { clip-path: circle(100px at center); }
+.profile .bio { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+.profile .contact > img { height: 100px; width: 100px; }
+.profile .contact { width: 100%; display: flex; justify-content: space-between; }
+
+/* experiences section */
+.experiences .row { padding-bottom: 20px; }
+/* TODO: replace with overidden Bootstrap <hr> */
+.experiences > div:not(:last-child) { margin-bottom: 20px; border-bottom: 1px solid #FFFFFF; border-bottom-color: rgba(34,163,159,0.35); }
+.experiences div > strong { display: block; padding-top: 4px; margin-bottom: 7px; }
+.experiences ul { padding-left: 1.5em; }
+.experiences ul > li { color: #22A39F }
+.experiences ul > li > span { color: black }
