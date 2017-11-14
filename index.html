@@ -6,10 +6,13 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <!-- include css -->
 	<link href="assets/style.css" rel="stylesheet">
+  <!-- include meter JS script -->
+  <script src="assets/meter.js"></script>
 	<title>Bernard Laveaux</title>
 </head>
-<body data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+<body data-spy="scroll" data-target="#main-navbar" data-offset="0">
   <!-- define navbar -->
   <nav id="main-navbar" class="navbar navbar-light fixed-top bg-light">
     <a class="navbar-brand" href="#">Bernard Laveaux</a>
@@ -20,32 +23,37 @@
       <li class="nav-item">
         <a class="nav-link" href="#experience">Experience</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
     </ul>
   </nav>
   <div class="title">
-    <div class="container">
-      <h1>Bernard Laveaux</h1>
+    <div class="overlay">
+      <div class="container">
+        <h1>Bernard Laveaux</h1>
+      </div>
     </div>
   </div>
   <div id="profile" class="profile">
     <div class="container">
       <h2>About me</h2>
       <div class="row">
-        <div class="col-md-4">
+      <div class="col-md-4">
           <div class="profile-background">
             <img src="assets/profile.jpg" alt="" class="profile-image">
           </div>
         </div>
-        <div class="bio col-md-6">
+        <div class="bio col-md-8">
           <p>
-            I'm a <strong>computer science</strong> student studying my final year at <strong>Carleton University</strong>. I've been previously interested in web development framework design, crypto technologies including crypto commodities and blockchain, and Deep Learning paradigms. I'm interning at <strong>Yelp</strong> this winter, and I've previously interned at <strong>Wealthsimple</strong>, <strong>Shopify</strong>, and <strong>IBM Canada</strong>. I'm currently looking for an internship this <strong>summer 2018</strong>
+            I'm a <strong>computer science</strong> student studying my final year at <strong>Carleton University</strong>. I've been previously interested in web development framework design, crypto technologies including crypto commodities and blockchain, and Deep Learning paradigms. I'm interning at <strong>Yelp</strong> this winter, and I've previously interned at <strong>Wealthsimple</strong>, <strong>Shopify</strong>, and <strong>IBM Canada</strong>. I'm currently looking for an internship this <strong>summer 2018</strong>.
           </p>
-
-          <div class="contact">
-            <img src="assets/github-square.svg">
-            <img src="assets/facebook-square.svg">
-            <img src="assets/linkedin-square.svg">
-          </div>
         </div>
       </div>
     </div>
@@ -88,12 +96,175 @@
             <ul>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h4>IBM Canada</h4>
+            <p>
+              May 2014 - December 2014
+            </p>
+          </div>
+          <div class="col-md-8">
+            <strong>Student Software Developer</strong>
+            <ul>
+              <li><span>Designed MVP for vector graphics based visualization conversion from SVG to GeoJSON</span></li>
+              <li><span>Refactored term and token matching systems in data analysis components used for core text based data analytics analysis</span></li>
+              <li><span>Expanded code coverage to improve stability and reliability of internal components</span></li>
+            <ul>
+          </div>
+        </div>
       </div>
     </div>
 
     <div>
-      <div id="project" class="projects container">
+      <div id="projects" class="projects container">
         <h2>Projects</h2>
+        <div class="row">
+            <div class="project col-md-6">
+              <img class="thumb" src="assets/project/500px.jpg">
+              <div class="overlay">
+                <h3>500px Sample App</h3>
+                <p>
+                  A Rails app that integrates with the 500px RESTful API.
+                  Developed an ORM-like REST client to wrap around web requests
+                </p>
+                <a class="btn btn-primary" href="http://500px.laveaux.me/">Visit Website</a>
+              </div>
+            </div>
+
+            <div class="project col-md-6">
+              <img class="thumb" src="assets/project/dotfiles.jpg">
+              <div class="overlay">
+                <h3>Dotfiles</h3>
+                <p>
+                  My dotfiles covering a bunch of configs for a series of apps and environments,
+                  including vim, tmux, zsh, ruby, and alacritty configs.
+                </p>
+                <a class="btn btn-primary" href="https://github.com/bl/dotfiles">Visit Repo</a>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="project col-md-6">
+              <img class="thumb" src="assets/project/500px.jpg">
+              <div class="overlay">
+                <h3>Event Dashboard</h3>
+                <p>
+                  A Node.JS and React app that visualizes calendar events on a dashboard.
+                  This is perfect for display TVs to show upcoming events.
+                </p>
+                <a class="btn btn-primary" href="https://github.com/bl/event-dashboard">Visit Repo</a>
+              </div>
+            </div>
+
+            <div class="project col-md-6">
+              <img class="thumb" src="assets/project/dotfiles.jpg">
+              <div class="overlay">
+                <h3>StrictParameters</h3>
+                <p>
+                  A StrongParameters-like param filtering module for filtering on specific object types.
+                  This allows for more strict and type-like response to param filtering, similar to TypeScript.
+                </p>
+                <a class="btn btn-primary" href="https://github.com/bl/StrictParameters">Visit Repo</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="skills" class="skills container">
+        <h2>Skills</h2>
+        <div class="row">
+          <ul class="col-md-6">
+            <li>
+              <div class="skill">Ruby</div>
+              <div class="meter"><span class="bar" data-width="100%"></span></div>
+            </li>
+            <li>
+              <div class="skill">JavaScript</div>
+              <div class="meter"><span class="bar" data-width="80%"></span></div>
+            </li>
+            <li>
+              <div class="skill">HTML/CSS</div>
+              <div class="meter"><span class="bar" data-width="80%"></span></div>
+            </li>
+            <li>
+              <div class="skill">Java</div>
+              <div class="meter"><span class="bar" data-width="80%"></span></div>
+            </li>
+            <li>
+              <div class="skill">C++</div>
+              <div class="meter"><span class="bar" data-width="80%"></span></div>
+            </li>
+            <li>
+              <div class="skill">Python</div>
+              <div class="meter"><span class="bar" data-width="70%"></span></div>
+            </li>
+            <li>
+              <div class="skill">C</div>
+              <div class="meter"><span class="bar" data-width="60%"></span></div>
+            </li>
+          </ul>
+          <ul class="col-md-6">
+            <li>
+              <div class="skill">Rails</div>
+              <div class="meter"><span class="bar" data-width="100%"></span></div>
+            </li>
+            <li>
+              <div class="skill">Node.js</div>
+              <div class="meter"><span class="bar" data-width="80%"></span></div>
+            </li>
+            <li>
+              <div class="skill">AngularJS</div>
+              <div class="meter"><span class="bar" data-width="80%"></span></div>
+            </li>
+            <li>
+              <div class="skill">React</div>
+              <div class="meter"><span class="bar" data-width="80%"></span></div>
+            </li>
+            <li>
+              <div class="skill">RESTful APIs</div>
+              <div class="meter"><span class="bar" data-width="50%"></span></div>
+            </li>
+            <li>
+              <div class="skill">Deep Learning</div>
+              <div class="meter"><span class="bar" data-width="50%"></span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact" class="contact bg-dark">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="mailto:bernard@laveaux.me">
+            <img src="assets/contact/at.svg">
+            <span>bernard@laveaux.me</span>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="https://github.com/bl">
+            <img src="assets/contact/github-square.svg">
+            <span>github.com/bl</span>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="https://twitter.com/meitzo">
+            <img src="assets/contact/twitter-square.svg">
+            <span>twitter.com/meitzo</span>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="https://www.linkedin.com/in/bernardlaveaux">
+            <img src="assets/contact/linkedin-square.svg">
+            <span>linkedin.com/in/bernardlaveaux</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
