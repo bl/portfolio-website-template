@@ -4,6 +4,7 @@ html, body {
   height:100%;
   color: #434242; /* use lighter font colour */
   font-family: 'Open Sans', sans-serif !important; /* use Open sans sans-serif across whole document */
+  font-weight: 300;
 }
 
 body {
@@ -11,11 +12,13 @@ body {
   line-height: 1.64;
 }
 
-/* custom header fotmatting */
-h2, h3, h5, h6, .h2, .h3, .h5, .h6, strong, b { margin-bottom: 20px; }
+/* global custom styling */
+h2, h3, h5, h6, .h2, .h3, .h5, .h6, strong, b { font-weight: bold; margin-bottom: 20px; }
 h2, h3, h5, h6, .h2, .h3, .h5, .h6 { color: #22A39F; }
-h1 { font-size: 64px; font-weight: 700; margin-bottom: 10px; }
-h2 { font-size: 54px; text-align: center; }
+h1, h4 { font-weight: 700; margin-bottom: 10px; }
+h2, h3 { font-weight: 300; font-size: 54px; text-align: center; }
+
+p.lead { text-align: center; color: #727878; }
 
 /* override Bootstrap container */
 .container { padding: 60px 180px; max-width: 1280px; }
@@ -45,7 +48,8 @@ h2 { font-size: 54px; text-align: center; }
 }
 /* Add thin line under title */
 .title h1 {
-  padding-bottom: 20px;
+  font-size: 64px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #FFFFFF;
   border-bottom-color: rgba(255,255,255,0.6);
   display: inline-block;
@@ -61,24 +65,28 @@ h2 { font-size: 54px; text-align: center; }
 .content > div:nth-child(2n+1) { background-color: #F3EFDE; }
 
 /* profile section */
-/*.profile, .content { width: 100vw; max-width:100%; }*/
-.profile .profile-background > img { width: 100%; }
-.profile-background { margin-top: -20px; background-color: #F3EFDE; clip-path: circle(115px at center); }
-.profile-image { clip-path: circle(100px at center); }
-.profile .bio { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+.profile-background {
+  min-width: 288px;
+  width: 100%;
+  height: 100%;
+  margin-top: -15px;
+  background-color: #F3EFDE;
+  clip-path: circle(115px at center);
+}
+.profile-image { width: 100%; clip-path: circle(100px at center); }
 
 /* experiences section */
 .experiences .row { padding-bottom: 20px; }
-/* TODO: replace with overidden Bootstrap <hr> */
-.experiences > div:not(:last-child) { margin-bottom: 20px; border-bottom: 1px solid #FFFFFF; border-bottom-color: rgba(34,163,159,0.35); }
+.experiences .container > div:not(:last-child) { margin-bottom: 20px; border-bottom: 1px solid #FFFFFF; border-bottom-color: rgba(34,163,159,0.35); }
 .experiences div > strong { display: block; padding-top: 4px; margin-bottom: 7px; }
 .experiences ul { padding-left: 1.5em; }
 .experiences ul > li { color: #22A39F; }
 .experiences ul > li > span { color: black }
+.experiences .location { min-width: 220px; }
 
 /* project section */
-.projects div:not(:last-child) { margin-bottom: 20px; }
-.projects .project { position: relative; }
+.projects .container > div:not(:last-child) { margin-bottom: 20px; }
+.projects .project { /*min-width: 275px;*/ position: relative; }
 .projects .project > img { z-index: 5; display: block; max-width: 100%; }
 .projects .overlay {
   position: absolute;
@@ -98,12 +106,13 @@ h2 { font-size: 54px; text-align: center; }
 /* skills section */
 .skills ul { list-style-type: none; }
 .skills ul > li { padding-bottom: 10px; display: flex; justify-content: space-between; }
-.skills li > .skill { font-weight: bold; flex-basis: 30%; }
+.skills li > .skill { min-width: 120px; font-weight: bold; flex-basis: 30%; }
 .skills li > .meter { flex-basis: 70% }
-.meter { padding: 3px; height: 25px; width: 100%; border: 4px solid #22A39F; }
+.meter { padding: 3px; height: 25px; min-width: 250px; width: 100%; border: 4px solid #22A39F; }
 .meter > .bar { display: block; background-color: #22A39F; height: 100%; width: 0%; }
 
 /* contact section */
+.contact hr { border-top: 1px solid rgba(255, 255, 255, 0.1); }
 .contact h2, .contact p, .contact a { color: white }
 .contact a { display: inline-block; padding-right: 10px; opacity: 0.6; text-decoration: none; }
 .contact a:hover { opacity: 1; }

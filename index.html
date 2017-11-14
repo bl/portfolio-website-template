@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <head>
+  <!-- include Open Sans font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <!-- include Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <!-- include Bootstrap JS -->
@@ -12,7 +14,7 @@
   <script src="assets/meter.js"></script>
 	<title>Bernard Laveaux</title>
 </head>
-<body data-spy="scroll" data-target="#main-navbar" data-offset="0">
+<body data-spy="scroll" data-target="#main-navbar" data-offset="58">
   <!-- define navbar -->
   <nav id="main-navbar" class="navbar navbar-light fixed-top bg-light">
     <a class="navbar-brand" href="#">Bernard Laveaux</a>
@@ -34,23 +36,27 @@
       </li>
     </ul>
   </nav>
+
+  <!-- define initial title pane -->
   <div class="title">
     <div class="overlay">
       <div class="container">
-        <h1>Bernard Laveaux</h1>
+        <h1>BERNARD LAVEAUX</h1>
+        <h3>Developer</h3>
       </div>
     </div>
   </div>
+
+  <!-- define profile pane -->
   <div id="profile" class="profile">
     <div class="container">
       <h2>About me</h2>
-      <div class="row">
-      <div class="col-md-4">
-          <div class="profile-background">
-            <img src="assets/profile.jpg" alt="" class="profile-image">
-          </div>
+      <hr>
+      <div class="row justify-content-around align-items-center">
+        <div class="profile-background col-sm-6 col-md-4">
+          <img src="assets/profile.jpg" alt="" class="profile-image">
         </div>
-        <div class="bio col-md-8">
+        <div class="bio col-sm-6 col-md-8">
           <p>
             I'm a <strong>computer science</strong> student studying my final year at <strong>Carleton University</strong>. I've been previously interested in web development framework design, crypto technologies including crypto commodities and blockchain, and Deep Learning paradigms. I'm interning at <strong>Yelp</strong> this winter, and I've previously interned at <strong>Wealthsimple</strong>, <strong>Shopify</strong>, and <strong>IBM Canada</strong>. I'm currently looking for an internship this <strong>summer 2018</strong>.
           </p>
@@ -58,13 +64,17 @@
       </div>
     </div>
   </div>
+
+  <!-- define content to contain main sections -->
   <div class="content">
-    <div>
-      <div id="experience" class="experiences container">
+    <!-- define experience pane -->
+    <div id="experience" class="experiences">
+      <div class="container">
         <h2>Experience</h2>
+        <hr>
         <!-- row of experiences -->
-        <div class="row">
-          <div class="col-md-4">
+        <div class="row justify-content-around">
+          <div class="location col-md-4">
             <h4>Wealthsimple</h4>
             <p>
               May 2017 - August 2017
@@ -79,8 +89,8 @@
             <ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
+        <div class="row justify-content-around">
+          <div class="location col-md-4">
             <h4>Shopify</h4>
             <p>
               May 2016 - December 2016
@@ -96,8 +106,8 @@
             <ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
+        <div class="row justify-content-around">
+          <div class="location col-md-4">
             <h4>IBM Canada</h4>
             <p>
               May 2014 - December 2014
@@ -115,11 +125,16 @@
       </div>
     </div>
 
-    <div>
-      <div id="projects" class="projects container">
+    <!-- define projects pane -->
+    <div id="projects" class="projects">
+      <div class="container">
         <h2>Projects</h2>
+        <hr>
+        <p class="lead">
+          A series of projects, primarily revolving around web services and technologies.
+        </p>
         <div class="row">
-            <div class="project col-md-6">
+            <div class="project col-sm-12 col-md-6">
               <img class="thumb" src="assets/project/500px.jpg">
               <div class="overlay">
                 <h3>500px Sample App</h3>
@@ -131,7 +146,7 @@
               </div>
             </div>
 
-            <div class="project col-md-6">
+            <div class="project col-sm-12 col-md-6">
               <img class="thumb" src="assets/project/dotfiles.jpg">
               <div class="overlay">
                 <h3>Dotfiles</h3>
@@ -171,9 +186,14 @@
       </div>
     </div>
 
-    <div>
-      <div id="skills" class="skills container">
+    <!-- define skills pane -->
+    <div id="skills" class="skills">
+      <div class="container">
         <h2>Skills</h2>
+        <hr>
+        <p class="lead">
+          These skills range from years of experience to a couple months of familiarity.
+        </p>
         <div class="row">
           <ul class="col-md-6">
             <li>
@@ -235,9 +255,12 @@
       </div>
     </div>
   </div>
+
+  <!-- define contact footer pane -->
   <div id="contact" class="contact bg-dark">
     <div class="container">
       <h2>Contact</h2>
+      <hr>
       <div class="row">
         <div class="col-md-6">
           <a href="mailto:bernard@laveaux.me">
