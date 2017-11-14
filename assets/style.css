@@ -19,7 +19,10 @@ h1, h4 { font-weight: 700; margin-bottom: 10px; }
 h2, h3 { font-weight: 300; }
 h2 { font-size: 54px; text-align: center; }
 
-p.lead { text-align: center; color: #727878; }
+/* TODO: center all <p> elements with the .lead class */
+/* we'll also set the font colour to #727878 */
+/* here are some suggestions: */
+/* p .lead { text-align: center; color: #727878; } */
 
 /* override Bootstrap container */
 .container { padding: 60px 180px; max-width: 1280px; }
