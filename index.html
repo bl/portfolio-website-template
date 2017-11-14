@@ -5,16 +5,19 @@
   <!-- include Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <!-- include Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- include css -->
 	<link href="assets/style.css" rel="stylesheet">
   <!-- include meter JS script -->
-  <script src="assets/meter.js"></script>
+  <script src="assets/js/meter.js"></script>
+  <!-- include scrollspy JS script -->
+  <script src="assets/js/scrollspy.js"></script>
 	<title>Bernard Laveaux</title>
 </head>
-<body data-spy="scroll" data-target="#main-navbar" data-offset="58">
+<body>
   <!-- define navbar -->
   <nav id="main-navbar" class="navbar navbar-light fixed-top bg-light">
     <a class="navbar-brand" href="#">Bernard Laveaux</a>
@@ -39,7 +42,7 @@
 
   <!-- define initial title pane -->
   <div class="title">
-    <div class="overlay">
+    <div class="title-overlay">
       <div class="container">
         <h1>BERNARD LAVEAUX</h1>
         <h3>Developer</h3>
@@ -134,34 +137,34 @@
           A series of projects, primarily revolving around web services and technologies.
         </p>
         <div class="row">
-            <div class="project col-sm-12 col-md-6">
-              <img class="thumb" src="assets/project/500px.jpg">
-              <div class="overlay">
-                <h3>500px Sample App</h3>
-                <p>
-                  A Rails app that integrates with the 500px RESTful API.
-                  Developed an ORM-like REST client to wrap around web requests
-                </p>
-                <a class="btn btn-primary" href="http://500px.laveaux.me/">Visit Website</a>
-              </div>
+          <div class="project col-md-12 col-lg-6">
+            <img class="thumb" src="assets/project/500px.jpg">
+            <div class="project-overlay">
+              <h3>500px Sample App</h3>
+              <p>
+                A Rails app that integrates with the 500px RESTful API.
+                Developed an ORM-like REST client to wrap around web requests
+              </p>
+              <a class="btn btn-primary" href="http://500px.laveaux.me/">Visit Website</a>
             </div>
+          </div>
 
-            <div class="project col-sm-12 col-md-6">
-              <img class="thumb" src="assets/project/dotfiles.jpg">
-              <div class="overlay">
-                <h3>Dotfiles</h3>
-                <p>
-                  My dotfiles covering a bunch of configs for a series of apps and environments,
-                  including vim, tmux, zsh, ruby, and alacritty configs.
-                </p>
-                <a class="btn btn-primary" href="https://github.com/bl/dotfiles">Visit Repo</a>
-              </div>
+          <div class="project col-md-12 col-lg-6">
+            <img class="thumb" src="assets/project/dotfiles.jpg">
+            <div class="project-overlay">
+              <h3>Dotfiles</h3>
+              <p>
+                My dotfiles covering a bunch of configs for a series of apps and environments,
+                including vim, tmux, zsh, ruby, and alacritty configs.
+              </p>
+              <a class="btn btn-primary" href="https://github.com/bl/dotfiles">Visit Repo</a>
             </div>
+          </div>
         </div>
         <div class="row">
-            <div class="project col-md-6">
-              <img class="thumb" src="assets/project/500px.jpg">
-              <div class="overlay">
+            <div class="project col-md-12 col-lg-6">
+              <img class="thumb" src="assets/project/event-dashboard.jpg">
+              <div class="project-overlay">
                 <h3>Event Dashboard</h3>
                 <p>
                   A Node.JS and React app that visualizes calendar events on a dashboard.
@@ -171,9 +174,9 @@
               </div>
             </div>
 
-            <div class="project col-md-6">
-              <img class="thumb" src="assets/project/dotfiles.jpg">
-              <div class="overlay">
+            <div class="project col-md-12 col-lg-6">
+              <img class="thumb" src="assets/project/strict-parameters.jpg">
+              <div class="project-overlay">
                 <h3>StrictParameters</h3>
                 <p>
                   A StrongParameters-like param filtering module for filtering on specific object types.
@@ -195,7 +198,7 @@
           These skills range from years of experience to a couple months of familiarity.
         </p>
         <div class="row">
-          <ul class="col-md-6">
+          <ul class="col-md-12 col-lg-6">
             <li>
               <div class="skill">Ruby</div>
               <div class="meter"><span class="bar" data-width="100%"></span></div>
@@ -225,7 +228,7 @@
               <div class="meter"><span class="bar" data-width="60%"></span></div>
             </li>
           </ul>
-          <ul class="col-md-6">
+          <ul class="col-md-12 col-lg-6">
             <li>
               <div class="skill">Rails</div>
               <div class="meter"><span class="bar" data-width="100%"></span></div>
@@ -262,13 +265,13 @@
       <h2>Contact</h2>
       <hr>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6">
           <a href="mailto:bernard@laveaux.me">
             <img src="assets/contact/at.svg">
             <span>bernard@laveaux.me</span>
           </a>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6">
           <a href="https://github.com/bl">
             <img src="assets/contact/github-square.svg">
             <span>github.com/bl</span>
@@ -276,13 +279,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6">
           <a href="https://twitter.com/meitzo">
             <img src="assets/contact/twitter-square.svg">
             <span>twitter.com/meitzo</span>
           </a>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6">
           <a href="https://www.linkedin.com/in/bernardlaveaux">
             <img src="assets/contact/linkedin-square.svg">
             <span>linkedin.com/in/bernardlaveaux</span>

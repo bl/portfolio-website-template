@@ -16,7 +16,8 @@ body {
 h2, h3, h5, h6, .h2, .h3, .h5, .h6, strong, b { font-weight: bold; margin-bottom: 20px; }
 h2, h3, h5, h6, .h2, .h3, .h5, .h6 { color: #22A39F; }
 h1, h4 { font-weight: 700; margin-bottom: 10px; }
-h2, h3 { font-weight: 300; font-size: 54px; text-align: center; }
+h2, h3 { font-weight: 300; }
+h2 { font-size: 54px; text-align: center; }
 
 p.lead { text-align: center; color: #727878; }
 
@@ -30,7 +31,7 @@ p.lead { text-align: center; color: #727878; }
 
 /* title section */
 .title {
-  background-image: url('interns.2016.jpg');
+  background-image: url('title.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,7 +42,7 @@ p.lead { text-align: center; color: #727878; }
   max-width:100%;
   text-align: center;
 }
-.title .overlay {
+.title-overlay {
   height: 100%;
   width: 100%;
   background-color: rgba(36,36,36,0.45);
@@ -85,10 +86,10 @@ p.lead { text-align: center; color: #727878; }
 .experiences .location { min-width: 220px; }
 
 /* project section */
-.projects .container > div:not(:last-child) { margin-bottom: 20px; }
-.projects .project { /*min-width: 275px;*/ position: relative; }
+.projects .row > div { margin-bottom: 20px; }
+.projects .project { position: relative; }
 .projects .project > img { z-index: 5; display: block; max-width: 100%; }
-.projects .overlay {
+.project-overlay {
   position: absolute;
   padding: inherit;
   top: 0;
@@ -98,17 +99,25 @@ p.lead { text-align: center; color: #727878; }
   opacity: 0;
   transition: .5s ease;
   background-color: rgba(27,64,85,0.8);
+  background-clip:content-box;
 }
-.projects .project:hover .overlay { opacity: 0.95; }
-.projects .overlay { display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.projects .overlay h3, .projects .overlay p { color: white; text-align: center; }
+.projects .project:hover .project-overlay { opacity: 0.95; }
+.project-overlay { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.project-overlay h3, .project-overlay p {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  text-align: center;
+}
 
 /* skills section */
 .skills ul { list-style-type: none; }
 .skills ul > li { padding-bottom: 10px; display: flex; justify-content: space-between; }
-.skills li > .skill { min-width: 120px; font-weight: bold; flex-basis: 30%; }
+.skills li > .skill { font-weight: bold; flex-basis: 30%; }
 .skills li > .meter { flex-basis: 70% }
-.meter { padding: 3px; height: 25px; min-width: 250px; width: 100%; border: 4px solid #22A39F; }
+
+/* meter specific formatting */
+.meter { padding: 3px; height: 25px; width: 100%; border: 4px solid #22A39F; }
 .meter > .bar { display: block; background-color: #22A39F; height: 100%; width: 0%; }
 
 /* contact section */
