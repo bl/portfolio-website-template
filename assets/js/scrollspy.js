@@ -1,30 +1,14 @@
 $(function() {
-  // register scrollspy to body
-  $('body').scrollspy({ target: '#main-navbar', offset: 58 });
-
-  // Add smooth scrolling on all links inside the navbar
   $("#main-navbar a").on('click', function(event) {
+    event.preventDefault();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+    var element = (this.hash !=="") ? $(this.hash) : $('html,body') ;
+    var offset = element.offset().top;
 
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      console.log($('html, body'));
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-
-    } // End if
+    $('html, body').animate({
+      scrollTop: offset
+    }, 800, function(){
+      window.location.hash = "#" + (element.attr('id') || "");
+    });
   });
 });
