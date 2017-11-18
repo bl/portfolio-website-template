@@ -17,7 +17,10 @@
   <script src="assets/js/scrollspy.js"></script>
 	<title>Bernard Laveaux</title>
 </head>
-<body>
+<body data-spy="scroll" data-target="#main-navbar" data-offset="58">
+  <!-- NOTE: the this is used to detect bootstrap media changes in JS -->
+  <div class="device-xs d-block d-sm-none"></div>
+
   <!-- define navbar -->
   <nav id="main-navbar" class="navbar navbar-light fixed-top bg-light">
     <a class="navbar-brand" href="#">Bernard Laveaux</a>
@@ -40,6 +43,32 @@
     </ul>
   </nav>
 
+  <!-- mobile navbar layout -->
+  <input type="checkbox" id="main-navicon"/>
+  <div id="main-navbar" class="navicon-container">
+    <div class="navicon-navbar fixed-top">
+      <a class="brand" href="#">Bernard Laveaux</a>
+    </div>
+    <label for="main-navicon" class="label"></label>
+    <ul class="sidebar">
+      <li class="nav-item">
+        <a class="nav-link" href="#profile">About me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#experience">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+
   <!-- define initial title pane -->
   <div class="title">
     <div class="title-overlay">
@@ -56,10 +85,10 @@
       <h2>About me</h2>
       <hr>
       <div class="row justify-content-around align-items-center">
-        <div class="profile-background col-sm-6 col-md-4">
+        <div class="profile-background col-lg-4">
           <img src="assets/profile.jpg" alt="" class="profile-image">
         </div>
-        <div class="bio col-sm-6 col-md-8">
+        <div class="bio col-lg-8">
           <p>
             I'm a <strong>computer science</strong> student studying my final year at <strong>Carleton University</strong>. I've been previously interested in web development framework design, crypto technologies including crypto commodities and blockchain, and Deep Learning paradigms. I'm interning at <strong>Yelp</strong> this winter, and I've previously interned at <strong>Wealthsimple</strong>, <strong>Shopify</strong>, and <strong>IBM Canada</strong>. I'm currently looking for an internship this <strong>summer 2018</strong>.
           </p>
@@ -77,13 +106,13 @@
         <hr>
         <!-- row of experiences -->
         <div class="row justify-content-around">
-          <div class="location col-md-4">
+          <div class="location col-lg-4">
             <h4>Wealthsimple</h4>
             <p>
               May 2017 - August 2017
             </p>
           </div>
-          <div class="col-md-8">
+          <div class="col-lg-8">
             <strong>Software Engineering Intern</strong>
             <ul>
               <li><span>Implemented containerization of resources to applications, facilitating separate isolated environments of the Wealthsimple platform</span></li>
@@ -93,13 +122,13 @@
           </div>
         </div>
         <div class="row justify-content-around">
-          <div class="location col-md-4">
+          <div class="location col-lg-4">
             <h4>Shopify</h4>
             <p>
               May 2016 - December 2016
             </p>
           </div>
-          <div class="col-md-8">
+          <div class="col-lg-8">
             <strong>Payments Software Developer Intern</strong>
             <ul>
               <li><span>Documented and resolved bug in Stripe’s open source Ruby API gem allowing timed-out idempotent requests to be correctly retried and resolved</span></li>
@@ -110,13 +139,13 @@
           </div>
         </div>
         <div class="row justify-content-around">
-          <div class="location col-md-4">
+          <div class="location col-lg-4">
             <h4>IBM Canada</h4>
             <p>
-              May 2014 - December 2014
+              May 2014 - August 2014
             </p>
           </div>
-          <div class="col-md-8">
+          <div class="col-lg-8">
             <strong>Student Software Developer</strong>
             <ul>
               <li><span>Designed MVP for vector graphics based visualization conversion from SVG to GeoJSON</span></li>
